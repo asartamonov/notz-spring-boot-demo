@@ -1,0 +1,35 @@
+{{> header}}
+
+<!-- Banner -->
+<section id="banner">
+	<h3 id="note-of-moment-header">Note of the moment:</h3>
+	
+	{{#model.randomnote}}
+	<h2 id="note-of-moment-text">" {{model.randomnote.text}} "</h2>
+	{{/model.randomnote}} 
+	
+	{{^model.randomnote}}
+	<h2 id="note-of-moment-text">Wise men speak because they have
+		something to say; Fools because they have to say something. Plato.</h2>
+	{{/model.randomnote}}
+	
+	<ul class="actions">
+		{{#nickname}}
+			<li id="randomize-btn"><a href="#" class="button big">Randomize</a></li>
+		{{/nickname}}
+		
+		{{^nickname}}
+			<li id="login-randomize-btn"><a href="/login" class="button big">Randomize</a></li>
+		{{/nickname}}
+		<li id="copy-text-btn"><a href="#" class="button big">Copy text to buffer</a></li>
+	</ul>
+	
+</section>
+
+<div id="center-content-area">
+	<header class="major">
+		<h2>We have {{model.notesCount}} notes in repository!</h2>
+		<p>And more in your head, %username%.</p>
+	</header>
+</div>
+{{> footer}}

@@ -1,0 +1,38 @@
+#submitnote {
+	margin-left: 79%;
+	width: 20%;
+}
+
+#notetextheader {
+	font-size: 35pt;
+	font-family: monospace;
+	color: graytext;
+	padding: 12px;
+}
+
+#charcounter {
+	font-family: monospace;
+	color: gray;
+	font-size: 25pt;
+	margin-left: 79%;
+}
+
+#new-note-form {
+	/* display:none; */
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+#random-note-area {
+	padding: 12px;
+	color: gray;
+	font-family: monospace;
+	font-size: 25pt;
+}
+
+#random-note-header {
+	
+}
+#random-note-text {
+	color: black;
+}

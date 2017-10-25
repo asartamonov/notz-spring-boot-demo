@@ -1,0 +1,31 @@
+{{> header}}
+
+<div id="new-note-area">
+	<span id="notetextheader">Write a note (or click to hide)</span>
+	<form id="new-note-form" action="newnote" method="post">
+		<textarea id="new-note-textarea" placeholder="Your note text. Maximum 500 symbols." name="text" rows="15" cols="20"></textarea>
+		<p id="charcounter">500 characters left.</p>
+		<input id="submitnote" type="submit" class="button big" value="Post it">
+    	{{#_csrf}}
+    	<input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+    	{{/_csrf}}
+	</form>
+</div>
+
+{{#newnote}}
+<div id='last-created-note-area'>
+	<p id='last-created-note-header'>Successfully created a note:</p><br>
+	<p id='last-created-note-text'>{{text}}</p>
+	<br>
+	<p id='last-created-note-date'>at: {{dateTime}}</p>
+</div>
+{{/newnote}}
+
+{{#randomnote}}
+<div id='random-note-area'>
+	<span id='random-note-header'>Something inspiring:</span>
+	<span id='random-note-text'>{{randomnote.text}}</span>
+</div>
+{{/randomnote}}
+
+{{> footer}}
